@@ -20,10 +20,11 @@ import forceAtlas2 from "graphology-layout-forceatlas2";
 import { cropToLargestConnectedComponent } from "graphology-components";
 
 // 1. Load CSV file:
-Papa.parse<{ name: string; acronym: string; subject_terms: string }>("./data.csv", {
+Papa.parse<{ name: string; acronym: string; subject_terms: string }>("./test_data.csv", {
   download: true,
   header: true,
   delimiter: ",",
+  newline: "\n",
   complete: (results) => {
     const graph: Graph = new Graph();
 
@@ -31,16 +32,17 @@ Papa.parse<{ name: string; acronym: string; subject_terms: string }>("./data.csv
     results.data.forEach((line) => {
       const institution = line.name;
       const acronym = line.acronym;
-
+      
       // Create the institution node:
       graph.addNode(institution, {
         nodeType: "institution",
-        label: [acronym, institution].filter((s) => !!s).join(" - "),
+        label: institution,
       });
 
-      // Extract subjects list:
-      const subjects = (line.subject_terms.match(/(?:\* )[^\n\r]*/g) || []).map((str) => str.replace(/^\* /, ""));
 
+      // Extract subjects list:
+      const subjects = (line.acronym.match(/(?:\* )[^\n\r]*/g) || []).map((str) => str.replace(/^\* /, ""));
+      alert(subjects)
       // For each subject, create the node if it does not exist yet:
       subjects.forEach((subject) => {
         if (!graph.hasNode(subject)) graph.addNode(subject, { nodeType: "subject", label: subject });
@@ -50,7 +52,7 @@ Papa.parse<{ name: string; acronym: string; subject_terms: string }>("./data.csv
     });
 
     // 3. Only keep the main connected component:
-    cropToLargestConnectedComponent(graph);
+    // cropToLargestConnectedComponent(graph);
 
     // 4. Add colors to the nodes, based on node types:
     const COLORS: Record<string, string> = { institution: "#FA5A3D", subject: "#5A75DB" };

@@ -14,8 +14,11 @@
   },
   "dependencies": {
     "@types/file-saver": "^2.0.4",
+    "@types/geojson": "^7946.0.10",
+    "@types/leaflet": "^1.9.0",
     "@types/papaparse": "^5.3.1",
     "@types/seedrandom": "^3.0.1",
+    "cesium": "^1.102.0",
     "chroma-js": "^2.1.2",
     "file-saver": "^2.0.5",
     "graphology": "^0.23.2",
@@ -27,9 +30,11 @@
     "graphology-layout-forceatlas2": "^0.8.1",
     "graphology-types": "^0.24.5",
     "iwanthue": "^1.5.1",
+    "leaflet": "^1.9.3",
     "papaparse": "^5.3.1",
     "seedrandom": "^3.0.5",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "wrld.js": "^1.1.0"
   },
   "devDependencies": {
     "async": "^3.2.2",
