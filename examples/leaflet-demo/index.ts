@@ -10,8 +10,7 @@ import L from "leaflet";
 import { pick } from "lodash";
 import dataset from "./test_data.json";
 import getNodeProgramImage from "sigma/rendering/webgl/programs/node.image";
-
-
+import Wrld from "wrld.js";
 
 //TODO : Max bounds on graph
 
@@ -38,11 +37,14 @@ L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{
 //   attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 // }).addTo(map);
 
+// const map = Wrld.map("map", "f265ba78ba6800213615a28161a1dbf9");
 
 L.tileLayer('https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png', {
   attribution:
     'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://www.OpenRailwayMap.org">OpenRailwayMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 }).addTo(map);
+
+
 
 
 const graph = new Graph();

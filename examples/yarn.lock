@@ -1982,10 +1982,18 @@ graphology-gexf@^0.10.1:
     graphology-utils "^2.4.1"
     xml-writer "^1.7.0"
 
-graphology-indices@^0.16.2, graphology-indices@^0.16.3:
+graphology-indices@^0.16.2:
   version "0.16.5"
   resolved "https://registry.npmjs.org/graphology-indices/-/graphology-indices-0.16.5.tgz"
   integrity sha512-bFd5x0csn/5H1R6Kp5yM2LK1fI9akaInVk/uMzOGZNL3D7erCeqnqyRVA9LBw7QhkOgy8pG3LUHJYWyV3XSufg==
+  dependencies:
+    graphology-utils "^2.4.2"
+    mnemonist "^0.39.0"
+
+graphology-indices@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.npmjs.org/graphology-indices/-/graphology-indices-0.17.0.tgz"
+  integrity sha512-A7RXuKQvdqSWOpn7ZVQo4S33O0vCfPBnUSf7FwE0zNCasqwZVUaCXePuWo5HBpWw68KJcwObZDHpFk6HKH6MYQ==
   dependencies:
     graphology-utils "^2.4.2"
     mnemonist "^0.39.0"
@@ -2028,20 +2036,33 @@ graphology-operators@^1.5.0:
   dependencies:
     graphology-utils "^2.0.0"
 
-graphology-shortest-path@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/graphology-shortest-path/-/graphology-shortest-path-2.0.0.tgz"
-  integrity sha512-6dJWgbr7w4YQKb7Y0w7vhZn2qAkqP+J0IhE9F3vz/HZcx7VSOqnNfTGtYr44BQ5ohdXj0l9iKjlWCb+3vqEINQ==
+graphology-shortest-path@^2.0.0, graphology-shortest-path@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/graphology-shortest-path/-/graphology-shortest-path-2.0.1.tgz"
+  integrity sha512-IYDbhK5EO+eiHjEXL0S+kcxeKYq6eFAfekeGA4YxH+XiAFV4UjeOWnjS0KjxD5+guoDwZYG7jXySExrV93YukQ==
   dependencies:
     "@yomguithereal/helpers" "^1.1.1"
-    graphology-indices "^0.16.3"
+    graphology-indices "^0.17.0"
     graphology-utils "^2.4.3"
+    mnemonist "^0.39.0"
+
+graphology-simple-path@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/graphology-simple-path/-/graphology-simple-path-0.2.0.tgz"
+  integrity sha512-4cGMWbVuJM0zlKDUx6dS6JGGLddizDPe8PsTokXVz2eTeHYg07qa5TgwIco15ta2RMM05+xy8N1mFnpS85y0kw==
+  dependencies:
+    graphology-utils "^1.8.0"
     mnemonist "^0.39.0"
 
 graphology-types@^0.24.5, graphology-types@>=0.19.0, graphology-types@>=0.20.0, graphology-types@>=0.23.0:
   version "0.24.5"
   resolved "https://registry.npmjs.org/graphology-types/-/graphology-types-0.24.5.tgz"
   integrity sha512-m8FVoj9b6MwIaTN+/AvoxXhcK5n0uSe7ZnhbQNTcjh94vzN6m5hU501LihtCfRjF35QEMVrXYOrTNO0wAR1Gxw==
+
+graphology-utils@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.npmjs.org/graphology-utils/-/graphology-utils-1.8.0.tgz"
+  integrity sha512-Pa7SW30OMm8fVtyH49b3GJ/uxlMHGfXly50wIhlcc7ZoX9ahZa7sPBz+obo4WZClrRV6wh3tIu0GJoI42eao1A==
 
 graphology-utils@^2.0.0, graphology-utils@^2.1.0, graphology-utils@^2.1.2, graphology-utils@^2.3.0, graphology-utils@^2.4.1, graphology-utils@^2.4.2, graphology-utils@^2.4.3, graphology-utils@^2.4.4:
   version "2.5.0"
@@ -2327,7 +2348,15 @@ ktx-parse@^0.4.5:
   resolved "https://registry.npmjs.org/ktx-parse/-/ktx-parse-0.4.5.tgz"
   integrity sha512-MK3FOody4TXbFf8Yqv7EBbySw7aPvEcPX++Ipt6Sox+/YMFvR5xaTyhfNSk1AEmMy+RYIw81ctN4IMxCB8OAlg==
 
-leaflet@^1.9.3:
+leaflet-tilelayer-mbtiles-ts@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.npmjs.org/leaflet-tilelayer-mbtiles-ts/-/leaflet-tilelayer-mbtiles-ts-1.6.0.tgz"
+  integrity sha512-q7K2Kp5xfUZEZWUZhVhOxhafekKizyIOF/14eCUN6/Egbg2uwQX49dQ2dW0v/FygAE+sG6G4J+iyvO7vNareXw==
+  dependencies:
+    leaflet "1.9.3"
+    sql.js "0.5.0"
+
+leaflet@^1.9.3, leaflet@1.9.3:
   version "1.9.3"
   resolved "https://registry.npmjs.org/leaflet/-/leaflet-1.9.3.tgz"
   integrity sha512-iB2cR9vAkDOu5l3HAay2obcUHZ7xwUBBjph8+PGtmW/2lYhbLizWtG7nTeYht36WfOslixQF9D/uSIzhZgGMfQ==
@@ -3111,6 +3140,11 @@ source-map@~0.7.2:
   version "0.7.3"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
+
+sql.js@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npmjs.org/sql.js/-/sql.js-0.5.0.tgz"
+  integrity sha512-E80yfgPSOvkbEweROP8kUg+8YfvuWht2RYhPMngkJuKD7IgFVWPP/pAhSAUVZMY9UPf5m10Pi0yW9e4CRnmYGg==
 
 "statuses@>= 1.5.0 < 2", statuses@~1.5.0:
   version "1.5.0"

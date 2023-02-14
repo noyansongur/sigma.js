@@ -22,6 +22,16 @@
         right: 1em;
         top: 1em;
       }
+      #searchSource {
+        position: absolute;
+        right: 1em;
+        top: 3em;
+      }
+      #searchTarget {
+        position: absolute;
+        right: 1em;
+        top: 5em;
+      }
       #buttons {
         position: absolute;
         right: 15em;
@@ -49,11 +59,25 @@
       #buttons > button:last-child {
         margin-right: 0;
       }
+      #buttons > button:last-child {
+        margin-right: 0;
+      }
+      #buttons > button:last-child {
+        margin-right: 0;
+      }
     </style>
     <div id="sigma-container"></div>
     <div id="map"></div>
     <div id="search">
       <input type="search" id="search-input" list="suggestions" placeholder="Try searching for a node..." />
+      <datalist id="suggestions"></datalist>
+    </div>
+    <div id="searchSource">
+      <input type="search" id="search-source-input" list="suggestions" placeholder="Select source node..." />
+      <datalist id="suggestions"></datalist>
+    </div>
+    <div id="searchTarget">
+      <input type="search" id="search-target-input" list="suggestions" placeholder="Select target node.." />
       <datalist id="suggestions"></datalist>
     </div>
     <div id="buttons">
@@ -69,6 +93,12 @@
       </button>
       <button id="circular">
         <span><img src="./BiLoaderCircle.svg" />circular</span>
+      </button>
+      <button id="calculatePath">
+        <span><img src="./calculatePath.svg" />Calculate Path</span>
+      </button>
+      <button id="resetPath">
+        <span><img src="./resetButton.svg" />Reset Path</span>
       </button>
     </div>
     <script src="build/bundle.js"></script>
